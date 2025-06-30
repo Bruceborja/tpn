@@ -1,0 +1,133 @@
+(function() {
+  window._POSTHOG_REMOTE_CONFIG = window._POSTHOG_REMOTE_CONFIG || {};
+  window._POSTHOG_REMOTE_CONFIG['phc_VHMOlrdxAbgSZHeF0SdSf07LZLRLAg5pZuTHkJGn050'] = {
+    config: {"token": "phc_VHMOlrdxAbgSZHeF0SdSf07LZLRLAg5pZuTHkJGn050", "supportedCompression": ["gzip", "gzip-js"], "hasFeatureFlags": false, "captureDeadClicks": false, "capturePerformance": false, "autocapture_opt_out": false, "autocaptureExceptions": false, "analytics": {"endpoint": "/i/v0/e/"}, "elementsChainAsString": true, "errorTracking": {"autocaptureExceptions": false, "suppressionRules": []}, "sessionRecording": false, "heatmaps": false, "surveys": false, "defaultIdentifiedOnly": true},
+    siteApps: [    
+    {
+      id: 'lVzmAAOfZkJErKhGUTMG9v2dhDqXHRKh36gOmvqRWDr',
+      init: function(config) {
+            (function () {let exports={};"use strict";
+        
+        Object.defineProperty(exports, "__esModule", {
+          value: true
+        });
+        exports.inject = inject;
+        function inject(_ref) {
+          var config = _ref.config;
+          if (config.domains) {
+            var domains = config.domains.split(',').map(function (domain) {
+              return domain.trim();
+            });
+            if (domains.length > 0 && domains.indexOf(window.location.hostname) === -1) {
+              return;
+            }
+          }
+          var localStorageKey = "notification-".concat(config.notification);
+          if (config.rememberClose === 'yes' && localStorage.getItem(localStorageKey)) {
+            return;
+          }
+          var style = "\n        .notification-bar-container {\n            min-height: 56px;\n        }\n        .notification-bar {\n            width: 100%;\n            min-height: 56px;\n            line-height: 36px;\n            font-size: 24px;\n            color: ".concat(config.textColor || 'default', ";\n            background: ").concat(config.backgroundColor || 'default', ";\n            font-weight: normal;\n            font-family: -apple-system, BlinkMacSystemFont, \"Inter\", \"Segoe UI\", \"Roboto\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n            text-align: center;\n            position: ").concat(config.position === 'sticky' ? 'fixed' : 'absolute', ";\n            left: 0;\n            top: 0;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            cursor: pointer;\n            z-index: 9999999;\n        }\n        .notification-bar a {\n            color: ").concat(config.linkColor || config.textColor || 'default', ";\n        }\n        .notification-bar p {\n            margin: 0;\n        }\n        ").concat(config.cssOverride || '', "\n    ");
+          var paragraph = Object.assign(document.createElement('p'), {
+            innerHTML: config.notification
+          });
+          var notificationElementContainer = Object.assign(document.createElement('div'), {
+            className: 'notification-bar-container'
+          });
+          var notificationElement = Object.assign(document.createElement('div'), {
+            className: 'notification-bar',
+            onclick: function onclick(e) {
+              if (!e.target.matches('a,button')) {
+                notificationElement.style.display = 'none';
+                notificationElementContainer.style.display = 'none';
+                window.localStorage.setItem(localStorageKey, 'true');
+              }
+            },
+            title: config.buttonTitle || ''
+          });
+          notificationElement.append(paragraph);
+          var shadow = createShadowRoot(style);
+          notificationElementContainer.appendChild(notificationElement);
+          shadow.appendChild(notificationElementContainer);
+          document.body.prepend(shadow);
+        }
+        function createShadowRoot(style) {
+          var div = document.createElement('div');
+          var shadow = div.attachShadow({
+            mode: 'open'
+          });
+          if (style) {
+            var styleElement = Object.assign(document.createElement('style'), {
+              innerText: style
+            });
+            shadow.appendChild(styleElement);
+          }
+          document.body.prepend(div);
+          return shadow;
+        };return exports;})().inject({ config:{"domains": "", "notification": "We're experiencing upstream issues with Anthropic models", "position": "sticky", "backgroundColor": "#ebece8", "textColor": "#333", "linkColor": "#f64e00", "cssOverride": ".notification-bar { }", "rememberClose": "yes"}, posthog:config.posthog });
+        config.callback(); return {}  }
+    },    
+    {
+      id: 'I7m1LxaoqQS2gpPQsWFZKbXP3WhSg5yuAD85VsBWiGI',
+      init: function(config) {
+            (function () {let exports={};"use strict";
+        
+        Object.defineProperty(exports, "__esModule", {
+          value: true
+        });
+        exports.inject = inject;
+        function inject(_ref) {
+          var config = _ref.config;
+          if (config.domains) {
+            var domains = config.domains.split(',').map(function (domain) {
+              return domain.trim();
+            });
+            if (domains.length > 0 && domains.indexOf(window.location.hostname) === -1) {
+              return;
+            }
+          }
+          var localStorageKey = "notification-".concat(config.notification);
+          if (config.rememberClose === 'yes' && localStorage.getItem(localStorageKey)) {
+            return;
+          }
+          var style = "\n        .notification-bar-container {\n            min-height: 56px;\n        }\n        .notification-bar {\n            width: 100%;\n            min-height: 56px;\n            line-height: 36px;\n            font-size: 24px;\n            color: ".concat(config.textColor || 'default', ";\n            background: ").concat(config.backgroundColor || 'default', ";\n            font-weight: normal;\n            font-family: -apple-system, BlinkMacSystemFont, \"Inter\", \"Segoe UI\", \"Roboto\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n            text-align: center;\n            position: ").concat(config.position === 'sticky' ? 'fixed' : 'absolute', ";\n            left: 0;\n            top: 0;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            cursor: pointer;\n            z-index: 9999999;\n        }\n        .notification-bar a {\n            color: ").concat(config.linkColor || config.textColor || 'default', ";\n        }\n        .notification-bar p {\n            margin: 0;\n        }\n        ").concat(config.cssOverride || '', "\n    ");
+          var paragraph = Object.assign(document.createElement('p'), {
+            innerHTML: config.notification
+          });
+          var notificationElementContainer = Object.assign(document.createElement('div'), {
+            className: 'notification-bar-container'
+          });
+          var notificationElement = Object.assign(document.createElement('div'), {
+            className: 'notification-bar',
+            onclick: function onclick(e) {
+              if (!e.target.matches('a,button')) {
+                notificationElement.style.display = 'none';
+                notificationElementContainer.style.display = 'none';
+                window.localStorage.setItem(localStorageKey, 'true');
+              }
+            },
+            title: config.buttonTitle || ''
+          });
+          notificationElement.append(paragraph);
+          var shadow = createShadowRoot(style);
+          notificationElementContainer.appendChild(notificationElement);
+          shadow.appendChild(notificationElementContainer);
+          document.body.prepend(shadow);
+        }
+        function createShadowRoot(style) {
+          var div = document.createElement('div');
+          var shadow = div.attachShadow({
+            mode: 'open'
+          });
+          if (style) {
+            var styleElement = Object.assign(document.createElement('style'), {
+              innerText: style
+            });
+            shadow.appendChild(styleElement);
+          }
+          document.body.prepend(div);
+          return shadow;
+        };return exports;})().inject({ config:{"domains": "", "notification": "We're experiencing upstream issues with Anthropic models", "position": "sticky", "backgroundColor": "#ebece8", "textColor": "#333", "linkColor": "#f64e00", "cssOverride": ".notification-bar { }", "rememberClose": "yes"}, posthog:config.posthog });
+        config.callback(); return {}  }
+    }]
+  }
+})();
